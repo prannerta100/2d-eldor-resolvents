@@ -1,3 +1,4 @@
+%FAST pruning algorithm
 function spec_mat=expmeldor_exchange_prune_fast(cA,ksym,Rpll,B0,ntmixlist,angle1,angle2)
 PRUNE_TOL=1e-2;
 
