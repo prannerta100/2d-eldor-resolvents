@@ -17,7 +17,7 @@ Two-dimensional electron–electron double resonance (2D-ELDOR) provides extensi
 3. `nlspmc` package for generating Stochastic Liouville Matrices, from https://www.acert.cornell.edu/index_files/acert_ftp_links.php
 
 ### Running the simulations:
-run the Paper1/Exch/runExchspecs.m MATLAB script to generate exchange 2D-ELDOR spectra
+run the Paper1/Exch/plot_all_exchange_spectra.m MATLAB script to generate exchange 2D-ELDOR spectra
 
 
 Send feedback to prannerta100@gmail.com (Pranav Gupta).
