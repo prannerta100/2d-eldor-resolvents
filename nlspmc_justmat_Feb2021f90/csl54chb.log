@@ -1,0 +1,72 @@
+ log file of program nlspc.rc
+                                                                                
+spectra 1                                                                       
+components 1                                                                    
+                                                                                
+c let gxx,gyy,gzz= 2.0021, 2.0087, 2.0057                                       
+let gxx,gyy,gzz= 2.0091, 2.0061, 2.0023                                         
+ *** CARTESIAN  form assumed for G tensor ***
+c let b0= 33000                                                                 
+let b0= 34050                                                                   
+                                                                                
+c let in2,axx,ayy,azz= 2,6, 6, 33.5                                             
+let in2,axx,ayy,azz= 2,5.2, 5.2, 33.5                                           
+ *** CARTESIAN  form assumed for A tensor ***
+                                                                                
+let Rbar,N,Nxy= 9,0, 0                                                          
+ *** SPHERICAL  form assumed for R tensor ***
+                                                                                
+let hwid=0.0                                                                    
+let mwid=0.0                                                                    
+                                                                                
+                                                                                
+let c20,c22= 0.0 0.0                                                            
+                                                                                
+let gib= 0.60                                                                   
+                                                                                
+let oss=0.0                                                                     
+let t2edi=0.0                                                                   
+                                                                                
+let nort=1                                                                      
+let ald,bed,gad= 0.0, 0.0, 0.0                                                  
+let psi=0.0                                                                     
+                                                                                
+c let lemx,lomx,kmx,mmx,ipnmx= 4 1 2 2 2                                        
+let lemx,lomx,kmx,mmx,ipnmx= 120 15 36 2 2                                      
+                                                                                
+basis                                                                           
+** Full basis set is generated **
+ Dimension of matrix: ndimoss = 6009 ndimdss = 9054
+ MTS lemx,lomx,kmx,mmx,ipnmx = 120,15,36, 2, 2
+                                                                                
+let nstep= 1500                                                                 
+let cgtol= 0.1E-5                                                               
+                                                                                
+c let idebug=1                                                                  
+                                                                                
+series iexp=3                                                                   
+series icomb=-1                                                                 
+series npt1=128                                                                 
+series npt2=128                                                                 
+series init1=0 #35                                                              
+series init2=0 #36                                                              
+series stept1=4                                                                 
+series stept2=4                                                                 
+series tfix=50                                                                  
+series weight=1                                                                 
+parms                                                                           
+=======================================================
+************** PARAMETER conversion *************
+
+ For Spectrum   1 Site   1
+
+       log(Rbar,N,Nxy) =    9.0000,   0.0000,   0.0000
+       Rbar[1/sec],N,Nxy = .1000E+10,.1000E+01,.1000E+01
+       t2edi,t2ndi,t2efi,t1edi,t1ndi =  0.000, 0.000, 0.000, 0.000, 0.000
+       t2edi,t1edi [1/sec]= .1000E+01,.1000E+01
+       T2,T1 [nsec]= *********,*********
+       Siteweight =   1.000000
+       mwid,gib,lib,hwid =   0.0000,  0.6000,  0.0000,  0.0000
+************** PARAMETER conversion END *************
+=======================================================
+fit                                                                             

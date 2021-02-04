@@ -1,0 +1,53 @@
+log csl54chb
+
+spectra 1
+components 1
+
+c let gxx,gyy,gzz= 2.0021, 2.0087, 2.0057
+let gxx,gyy,gzz= 2.0091, 2.0061, 2.0023
+c let b0= 33000
+let b0= 34050
+
+c let in2,axx,ayy,azz= 2,6, 6, 33.5
+let in2,axx,ayy,azz= 2,5.2, 5.2, 33.5
+
+let Rbar,N,Nxy= 9,0, 0
+
+let hwid=0.0
+let mwid=0.0
+
+
+let c20,c22= 0.0 0.0
+
+let gib= 0.60
+
+let oss=0.0
+let t2edi=0.0
+
+let nort=1
+let ald,bed,gad= 0.0, 0.0, 0.0
+let psi=0.0
+
+c let lemx,lomx,kmx,mmx,ipnmx= 4 1 2 2 2
+let lemx,lomx,kmx,mmx,ipnmx= 120 15 36 2 2
+
+basis
+
+let nstep= 1500
+let cgtol= 0.1E-5
+
+c let idebug=1
+
+series iexp=3 
+series icomb=-1
+series npt1=128
+series npt2=128
+series init1=0 #35
+series init2=0 #36
+series stept1=4
+series stept2=4
+series tfix=50
+series weight=1
+parms
+fit
+
