@@ -1,0 +1,405 @@
+addprm.f
+calls []
+includes ['lmcomm', 'parms', 'miscel', 'simparm', 'rndoff', 'limits', 'stdio', 'datas']
+
+
+anxlk.f
+calls []
+includes ['rndoff', 'limits', 'simparm']
+
+
+bessel.f
+calls []
+includes ['rndoff', 'pidef']
+
+
+brent.f
+calls []
+includes ['limits', 'stdio', 'parms']
+
+
+ccrints.f
+calls []
+includes []
+
+
+cd2km.f
+calls ['setcs']
+includes ['rndoff', 'pidef']
+
+
+cmds.f
+calls ['catchc', 'ipfind', 'rmvprm', ' indtkn', 'fbasis', 'touppr', 'uncatchc', 'gettkn', 'addprm']
+includes ['lpnam', 'names', 'basis', 'lmcomm', 'parms', 'parmequ', 'miscel', 'simparm', 'iterat', 'rndoff', 'limits', 'stdio', 'datas']
+
+
+cmtqli.f
+calls []
+includes ['rndoff', 'limits']
+
+
+comgap.f
+calls []
+includes ['limits']
+
+
+compev.f
+calls ['cmtqli']
+includes ['limits', 'simparm']
+
+
+comps.f
+calls ['gettkn']
+includes ['lpnam', 'parms', 'parmequ', 'miscel', 'simparm', 'limits', 'stdio']
+
+
+convft.f
+calls ['switch', 'fft']
+includes ['wkspcm', 'physcn', 'simparm', 'limits', 'stdio']
+
+
+convtc.f
+calls ['rmvprm', 'tosphr', 'touppr', 'toaxil', 'tocart', 'gettkn']
+includes ['lpnam', 'names', 'parms', 'miscel', 'simparm', 'limits', 'stdio']
+
+
+covar.f
+calls []
+includes []
+
+
+cscg.f
+calls ['zaypx', 'zaxpy2', 'scmvm']
+includes ['eprmat', 'parms', 'rndoff', 'limits', 'stdio']
+
+
+csval.f
+calls ['cmtqli', 'inverr', 'isoev', 'compev', 'lump', 'comgap']
+includes ['rndoff', 'limits', 'stdio', 'simparm']
+
+
+csvec.f
+calls []
+includes ['rndoff', 'limits']
+
+
+datac.f
+calls ['wrfit', 'gettkn', 'setdat', 'touppr']
+includes ['names', 'lmcomm', 'parms', 'wkspcm', 'limits', 'stdio', 'datas']
+
+
+dftcor.f
+calls []
+includes []
+
+
+dpmpar.f
+calls []
+includes []
+
+
+enorm.f
+calls []
+includes []
+
+
+eprmat.f
+calls []
+includes []
+
+
+evcgf.f
+calls ['matrxd', 'matrxo']
+includes ['basis', 'eprmat', 'parms', 'wkspcm', 'simparm', 'limits', 'stdio']
+
+
+fbasis.f
+calls ['pcheck']
+includes ['basis', 'miscel', 'simparm', 'limits', 'stdio']
+
+
+fft.f
+calls []
+includes []
+
+
+fitp.f
+calls ['wrfit', 'pfun', 'setdat ', 'covar', 'ordrpr', 'lmnls']
+includes ['names', 'lmcomm', 'lmtxt', 'parms', 'miscel', 'simparm', 'iterat', 'limits', 'stdio', 'tdspec', 'datas']
+
+
+ftest.f
+calls []
+includes []
+
+
+fz.f
+calls []
+includes ['limits', 'simparm']
+
+
+getdat.f
+calls ['splnay', 'ncspln']
+includes ['limits', 'stdio']
+
+
+helpc.f
+calls ['gettkn', 'linchk', 'touppr']
+includes ['stdio']
+
+
+inverr.f
+calls []
+includes ['limits', 'simparm']
+
+
+ipar.f
+calls []
+includes []
+
+
+ipfind.f
+calls []
+includes ['lpnam', 'limits', 'parms', 'simparm']
+
+
+isoev.f
+calls []
+includes ['limits', 'simparm']
+
+
+letcmc.f
+calls ['indtkn', 'gettkn', 'ipfind', 'touppr']
+includes ['lpnam', 'parms', 'miscel', 'simparm', 'limits', 'stdio', 'datas']
+
+
+lmnls.f
+calls ['fcn', 'lmpar', 'mapxxx', 'ftest1', 'qrfac']
+includes ['limits', 'parms', 'iterat']
+
+
+lmpar.f
+calls ['qrsolv']
+includes []
+
+
+lprmpt.f
+calls []
+includes []
+
+
+lsame.f
+calls []
+includes []
+
+
+lump.f
+calls []
+includes ['limits', 'simparm']
+
+
+mapxxx.f
+calls []
+includes ['limits', 'parms']
+
+
+matrxd.f
+calls ['cd2km', 'anxlk']
+includes ['basis', 'eprmat', 'physcn', 'maxl', 'simparm', 'rndoff', 'limits']
+
+
+matrxo.f
+calls ['cd2km', 'anxlk']
+includes ['basis', 'eprmat', 'physcn', 'maxl', 'simparm', 'rndoff', 'limits']
+
+
+mnbrak.f
+calls []
+includes ['limits', 'parms', 'iterat']
+
+
+nlsinit.f
+calls []
+includes ['nlsdim', 'nlsnam', 'names', 'eprprm', 'basis', 'expdat', 'lmcomm', 'parms', 'lmcom', 'parmequ', 'miscel', 'prmeqv', 'simparm', 'iterat', 'limits', 'stdio', 'datas', 'parcom']
+
+
+nlspmc.f
+calls ['setfil', 'assgnc', 'gettkn', 'catchc', 'basis', 'statc', 'varyc', 'uncatchc', 'srchc', 'datac', 'ungett', 'spectra', 'series', 'convtc', 'fixc', 'comps', 'letcmc', 'fitc', 'parc', 'touppr', 'helpc']
+includes ['nlsdim', 'nlsnam', 'names', 'eprprm', 'expdat', 'lmcomm', 'parms', 'parmequ', 'miscel', 'simparm', 'iterat', 'limits', 'stdio', 'parcom']
+
+
+ordrpr.f
+calls ['ccrint', 'ccrin1']
+includes ['rndoff']
+
+
+p1pfun.f
+calls ['pfun']
+includes ['limits', 'parms', 'datas', 'lmcomm']
+
+
+pcheck.f
+calls ['cd2km', 'tocart']
+includes ['names', 'basis', 'parms', 'miscel', 'maxl', 'simparm', 'rndoff', 'limits', 'stdio', 'datas']
+
+
+pfunnew.f
+calls ['wrfit', 'ftest3', 'sim2d', 'xshft', 'sscale', 'ftest1', 'ftest2', 'setspc']
+includes ['lpnam', 'parms', 'wkspcm', 'miscel', 'simparm', 'iterat', 'limits', 'stdio', 'tdspec', 'datas']
+
+
+plgndr.f
+calls []
+includes []
+
+
+polint.f
+calls []
+includes ['stdio']
+
+
+qrfac.f
+calls []
+includes []
+
+
+qrsolv.f
+calls []
+includes []
+
+
+rmvprm.f
+calls []
+includes ['parms', 'miscel', 'simparm', 'limits', 'stdio']
+
+
+scmvm.f
+calls []
+includes ['rndoff', 'limits', 'eprmat']
+
+
+setnm.f
+calls []
+includes ['limits', 'names']
+
+
+sim2d.f
+calls ['stvecd', 'spcalc', 'evcgf', 'convft', 'pcheck']
+includes ['egvcom', 'basis', 'parms', 'parmequ', 'miscel', 'stvcom', 'simparm', 'limits', 'stdio']
+
+
+spcalc.f
+calls ['zgemv', 'matrxo', 'zgemm', 'matrxd', 'cscg', 'scmvm', 'dftcor', 'fft', 'polint', 'zgemul', 'realft']
+includes ['basis', 'eprmat', 'wkspcm', 'physcn', 'stvcom', 'simparm', 'limits', 'stdio']
+
+
+spectra.f
+calls ['gettkn']
+includes ['lpnam', 'parms', 'parmequ', 'miscel', 'simparm', 'limits', 'stdio']
+
+
+srchc.f
+calls ['mnbrak', 'indtkn', 'ipfind', 'touppr', 'gettkn']
+includes ['lpnam', 'parms', 'miscel', 'simparm', 'iterat', 'limits', 'stdio']
+
+
+sscale.f
+calls []
+includes ['limits', 'datas']
+
+
+strutl.f
+calls ['gettkn', 'ungett']
+includes ['limits', 'stdio', 'miscel']
+
+
+stvecd.f
+calls []
+includes ['basis', 'wkspcm', 'stvcom', 'simparm', 'limits']
+
+
+stveco.f
+calls ['ccrint']
+includes ['basis', 'stvcom', 'simparm', 'rndoff', 'limits']
+
+
+switch.f
+calls []
+includes []
+
+
+tensym.f
+calls ['tocart']
+includes ['lpnam', 'parms', 'miscel', 'simparm', 'rndoff', 'limits', 'stdio']
+
+
+test.f
+calls []
+includes []
+
+
+threadpriv.f
+calls []
+includes []
+
+
+try_ft.f
+calls ['polint', 'dftcor', 'fft']
+includes []
+
+
+vchange.f
+calls []
+includes ['rndoff']
+
+
+w3j.f
+calls []
+includes ['maxl']
+
+
+wrfit.f
+calls []
+includes ['limits', 'stdio', 'datas']
+
+
+xerbla.f
+calls []
+includes []
+
+
+xshft.f
+calls ['four1', 'twofft', 'realft']
+includes []
+
+
+zaxpy2.f
+calls []
+includes ['rndoff', 'limits']
+
+
+zaypx.f
+calls []
+includes ['rndoff', 'limits']
+
+
+zdotu2.f
+calls []
+includes ['rndoff', 'limits']
+
+
+zgemm.f
+calls []
+includes []
+
+
+zgemv.f
+calls []
+includes []
+
+
+znormu.f
+calls []
+includes ['rndoff', 'limits', 'file stddim']
+
+
