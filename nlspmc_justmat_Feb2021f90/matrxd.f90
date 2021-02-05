@@ -88,12 +88,13 @@
 !----------------------------------------------------------------------
     subroutine matrxd(ierr)
 
+    use eprmat
+    use basis
     implicit none
-
     include 'limits.inc'
     include 'simparm.inc'
-    include 'basis.inc'
-    include 'eprmat.inc'
+!    include 'basis.inc'
+!    include 'eprmat.inc'
     include 'maxl.inc'
     include 'rndoff.inc'
     include 'physcn.inc'

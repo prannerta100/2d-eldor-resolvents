@@ -319,7 +319,8 @@
 !      print   : prints out the indices on the screen
 
 !----------------------------------------------------------------------
-    subroutine basis(line,lu)
+    subroutine basis_subroutine(line,lu)
+    use basis
     implicit none
 
     include 'limits.inc'
@@ -327,7 +328,7 @@
     include 'simparm.inc'
     include 'parms.inc'
     include 'parmequ.inc'
-    include 'basis.inc'
+!    include 'basis.inc'
     include 'miscel.inc'
     include 'stdio.inc'
     character*(LINELG) line
@@ -509,7 +510,7 @@
     1220 format(/,15x,'BASIS SET : diagonal space',//,2x,'element',7x, &
     'L  jK   K  jqM  M  pI  qI',/,2x,42('-'))
 
-    end subroutine basis
+    end subroutine basis_subroutine
 
 
 !----------------------------------------------------------------------

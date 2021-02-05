@@ -50,10 +50,10 @@
 !               convft.f
 
 !*********************************************************************
-
     subroutine sim2d(icalc,xspec,cspec,npt1,npt2,nvar, &
     iflag,ixi,delx,ispec,isite,ierr)
 
+    use basis
     implicit none
 
     include 'limits.inc'
@@ -62,7 +62,7 @@
     include 'parmequ.inc'
     include 'parms.inc'
     include 'stvcom.inc'
-    include 'basis.inc'
+!    include 'basis.inc'
 !    include 'egvcom.inc'
     include 'miscel.inc'
 
@@ -71,7 +71,7 @@
     parameter (zero=0.0D0,czero=(0.0D0,0.0D0),ci=(0.0d0,1.0d0))
 
     integer :: npt1,npt2,icalc,i,j,k,l,iort,bdw, &
-    ntmp,nvar,iflag,ixi,ierr,ispec,isite
+               ntmp,nvar,iflag,ixi,ierr,ispec,isite
     integer :: tt1,tt2,tt3,nbindx
     double precision :: t1,t2,cspsi,amin,amax,delx,flg,norm
 

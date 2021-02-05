@@ -28,12 +28,12 @@
     subroutine fbasis(ixname,igen,ierr)
 
 ! igen=0 to read from file, else generate full.
-
+    use basis
     implicit none
 
     include 'limits.inc'
     include 'simparm.inc'
-    include 'basis.inc'
+!    include 'basis.inc'
     include 'stdio.inc'
     include 'miscel.inc'
 

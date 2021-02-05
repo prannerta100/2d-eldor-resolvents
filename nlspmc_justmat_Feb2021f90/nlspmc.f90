@@ -119,7 +119,7 @@
         !----------------------------------------------------------------------
         else if (token == 'BASIS') then
         
-            call basis(line,luout)
+            call basis_subroutine(line,luout)
         
         !----------------------------------------------------------------------
         !        CARTESIAN command

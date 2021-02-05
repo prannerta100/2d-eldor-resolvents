@@ -39,9 +39,10 @@
 
     subroutine stveco
 
+    use basis
     include 'limits.inc'
     include 'simparm.inc'
-    include 'basis.inc'
+!    include 'basis.inc'
     include 'stvcom.inc'
     include 'rndoff.inc'
 

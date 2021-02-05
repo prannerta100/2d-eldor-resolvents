@@ -602,6 +602,8 @@
 !   of the given sites.
 !----------------------------------------------------------------------
     function prmsOK( lu )
+
+    use basis        
     implicit none
     logical :: prmsOK
     integer :: lu
@@ -611,7 +613,7 @@
     include 'datas.inc'
     include 'parms.inc'
     include 'miscel.inc'
-    include 'basis.inc'
+!    include 'basis.inc'
     include 'rndoff.inc'
 
     integer :: j

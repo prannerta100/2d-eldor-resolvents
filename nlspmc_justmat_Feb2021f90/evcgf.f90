@@ -45,14 +45,15 @@
 !    subroutine evcgf(psval,stvx,nev,eval,evec,ierr)
     subroutine evcgf(psval,stvx,nev,ierr)
 
+    use eprmat
+    use basis
     implicit none
-
     include 'limits.inc'
     include 'stdio.inc'
     include 'simparm.inc'
     include 'parms.inc'
-    include 'eprmat.inc'
-    include 'basis.inc'
+!    include 'eprmat.inc'
+!    include 'basis.inc'
     include 'wkspcm.inc'
 
     integer :: i,j,k,psval,ndim,nev,ierr,mxit,ival,ndone,nmin,ll
@@ -72,7 +73,9 @@
 
 
     ierr=0
-    if (psval.ne.0) then
+    if (psval.ne.0) then !assuming that pS=+1 gets called first
+        allocate(zdiag(2,MXDIM),izmat(MXEL),jzmat(MXDIM+1),&
+                 kzmat(MXDIM+1),zmat(MXEL)) !can't allocate in a module it seems
         ndim=ndimo
     !         write(luttyo,*) 'pS=1,nelim, nelre=',nelim,nelre
         call matrxo(ierr)

@@ -13,6 +13,7 @@
 !----------------------------------------------------------------------
 
     subroutine nlsinit
+    use basis        
     implicit none
 
 !      include 'nlsdim.inc'
@@ -32,11 +33,28 @@
     include 'simparm.inc'
     include 'datas.inc'
     include 'lmcomm.inc'
-    include 'basis.inc'
+!    include 'basis.inc'
     include 'miscel.inc'
 
     integer :: ix,ix2,ix3
 
+!    integer :: jqe1,pi1,qi1,l1,jk1,k1,jm1,m1
+!    integer :: mjqe1,mpi1,mqi1,ml1,mjk1,mk1,mjm1,mm1, &
+!    pidptr,dpidptr,basisptr
+! allow for multiple sites, but not multiple spec basis sets.
+    allocate(jqe1(MXDIM),pi1(MXDIM),qi1(MXDIM), &
+             l1(MXDIM),jk1(MXDIM),k1(MXDIM),jm1(MXDIM), &
+             m1(MXDIM))
+    allocate(mjqe1(MMXDIM),mpi1(MMXDIM),mqi1(MMXDIM), &
+             ml1(MMXDIM),mjk1(MMXDIM),mk1(MMXDIM),mjm1(MMXDIM), &
+             mm1(MMXDIM),pidptr(MXSPEC*MXSITE))
+    allocate(djqe1(2*MXDIM),dpi1(2*MXDIM),dqi1(2*MXDIM), &
+             dl1(2*MXDIM),djk1(2*MXDIM),dk1(2*MXDIM),djm1(2*MXDIM), &
+             dm1(2*MXDIM))
+    allocate(mdjqe1(2*MMXDIM),mdpi1(2*MMXDIM),mdqi1(2*MMXDIM), &
+             mdl1(2*MMXDIM),mdjk1(2*MMXDIM),mdk1(2*MMXDIM), &
+             mdjm1(2*MMXDIM),mdm1(2*MMXDIM),dpidptr(MXSPEC*MXSITE))
+    allocate(pid(MXDIM),pp(2*MXDIM),mpid(MMXDIM),mpp(2*MMXDIM))
 !      tempvar = .false.		! do we vary temperature in series?
 !      psivar = .false.		! do we vary psi (why this variable?)
     nspectra = 1		! One simulation is default, unrelated
